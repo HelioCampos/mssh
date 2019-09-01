@@ -6,3 +6,4 @@ uploads/
 public/build/
 addressbook.*
 recipes.*
+yarn.lock
