@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker logs "$@" "$(docker ps | grep 'eonclash/mssh' | awk '{print $1}')"

@@ -1,0 +1,10 @@
+.env
+.git/
+.gitignore
+Dockerfile
+secrets/
+node_modules/
+uploads/
+addressbook.*
+recipes.*
+docker_*

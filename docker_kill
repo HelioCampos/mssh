@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker kill "$(docker ps | grep 'eonclash/mssh' | awk '{print $1}')"

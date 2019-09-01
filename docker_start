@@ -1,0 +1,17 @@
+#!/bin/bash
+
+WD="$( cd -P "$( dirname "${SOURCE}" )" >/dev/null 2>&1 && pwd )"
+
+if [ "$HOST_PORT" == "" ]; then
+  HOST_PORT=8080
+fi
+
+if [ "$SSH_USERNAME" == "" ]; then
+  SSH_USERNAME=$(whoami)
+fi
+
+docker run --rm -d -p ${HOST_PORT}:8080 \
+  -v "${HOME}/.ssh/:/root/.ssh/" \
+  -e "SSH_USERNAME=${SSH_USERNAME}" \
+  -v "${WD}/addressbook.yaml:/usr/src/app/addressbook.yaml" \
+  -v "${WD}/recipes.yaml:/usr/src/app/recipes.yaml" eonclash/mssh "$@"

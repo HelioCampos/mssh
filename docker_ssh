@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ "$CMD" == "" ]; then
+  CMD="$*"
+  if [ "$CMD" == "" ]; then
+    CMD="/bin/ash"
+  fi
+fi
+
+docker exec -it "$(docker ps | grep 'eonclash/mssh' | awk '{print $1}')" ${CMD}

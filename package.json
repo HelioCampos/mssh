@@ -1,0 +1,31 @@
+{
+  "name": "mssh",
+  "version": "1.0.0",
+  "description": "A simple Multi-SSH UI for running scripts and such on remote systems via SSH",
+  "main": "server.js",
+  "author": "Jeremy Darling <jeremy.darling@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "build": "cd public && yarn build",
+    "dev-ui": "cd public && yarn start",
+    "dev-server": "nodemon server.js --pretty --trace --json false",
+    "dev": "npm-run-all --parallel dev-server dev-ui"
+  },
+  "dependencies": {
+    "async": "^2.6.2",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "js-yaml": "^3.13.1",
+    "minimist": "^1.2.0",
+    "multer": "^1.4.2",
+    "nodemon": "^1.18.10",
+    "npm-run-all": "^4.1.5",
+    "request": "^2.88.0",
+    "safe-json-stringify": "^1.2.0",
+    "scp2": "^0.5.0",
+    "ssh2": "^0.8.2"
+  }
+}

@@ -1,0 +1,8 @@
+node_modules/
+secrets/
+reports/
+uploads/
+.env
+public/build/
+addressbook.*
+recipes.*
